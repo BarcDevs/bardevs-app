@@ -14,7 +14,7 @@ const ContactButton = ({}) => {
             >
                 <Button
                     size="sm"
-                    className="bg-[#77c6b0] text-[#3e2f34] hover:bg-[#5fbba2]"
+                    className="cursor-pointer bg-[#77c6b0] text-[#3e2f34] hover:bg-[#5fbba2]"
                 >
                     {t(NAV_LINKS.contact.locale)}
                 </Button>

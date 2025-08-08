@@ -30,7 +30,7 @@ const NavLinks = ({}) => {
             />
             <Link href={NAV_LINKS.contact.href}>
                 <Button
-                    className="bg-[#77c6b0] text-[#3e2f34] hover:bg-[#5fbba2]"
+                    className="cursor-pointer bg-[#77c6b0] text-[#3e2f34] hover:bg-[#5fbba2]"
                     aria-label={t(NAV_LINKS.contact.locale)}
                 >
                     {t(NAV_LINKS.contact.locale)}
