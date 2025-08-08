@@ -17,7 +17,13 @@ export const metadata: Metadata = {
         default: 'Bardevs — Clean code. Elegant design. Real results.',
         template: '%s — bardevs'
     },
-    description: 'Professional websites for modern businesses. Custom-built websites, landing pages, and web apps with clean code and elegant design.'
+    description: 'Professional websites for modern businesses. Custom-built websites, landing pages, and web apps with clean code and elegant design.',
+    icons: {
+        icon: '/favicon.ico',
+        shortcut: '/favicon-16x16.png',
+        apple: '/apple-touch-icon.png'
+    },
+    manifest: '/site.webmanifest'
 };
 
 export default function RootLayout({
