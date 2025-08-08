@@ -1,3 +1,4 @@
+import { Navbar } from '@/components/shared/navbar'
 import { useLanguage } from '@/context/language'
 
 export const HomePage = () => {
@@ -8,7 +9,7 @@ export const HomePage = () => {
             dir={dir}
             className="min-h-[100dvh] flex flex-col bg-white"
         >
-
-        </main>
+            <Navbar/>
+        </div>
     )
 }
