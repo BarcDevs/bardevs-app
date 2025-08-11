@@ -1,4 +1,4 @@
-import { Locales } from '@/locales'
+import { Locales } from '@/lib/language/keys'
 
 type NavLink = {
     [ key: string ]:
