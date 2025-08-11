@@ -1,7 +1,9 @@
-import { LanguageProvider } from '@/context/language'
-import type { Metadata } from 'next'
+import { Metadata } from 'next'
+import { NextIntlClientProvider } from 'next-intl'
+import { getLocale, getMessages } from 'next-intl/server'
 import { Geist, Geist_Mono } from 'next/font/google'
-import { ReactNode } from 'react'
+import { FC, ReactNode } from 'react'
+
 import '@/styles/globals.css'
 
 const geistSans = Geist({
@@ -28,20 +30,28 @@ export const metadata: Metadata = {
     manifest: '/site.webmanifest'
 }
 
-export default function RootLayout ({
-    children
-}: Readonly<{
-    children: ReactNode;
-}>) {
+type RootLayoutProps = {
+    children: ReactNode
+}
+
+const getDirection = (locale: string) => ( locale === 'he' ? 'rtl' : 'ltr' )
+
+const RootLayout: FC<RootLayoutProps> = async ({ children }) => {
+    const locale = await getLocale()
+    const messages = await getMessages()
+
     return (
-        <html lang="en">
-        <LanguageProvider>
-            <body
-                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-            >
+        <html lang={locale} dir={getDirection(locale)}>
+        <NextIntlClientProvider
+            locale={locale}
+            messages={messages}
+        >
+            <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
             {children}
             </body>
-        </LanguageProvider>
+        </NextIntlClientProvider>
         </html>
     )
 }
+
+export default RootLayout
