@@ -1,8 +1,10 @@
+import { FC } from 'react'
 import { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
 import { getLocale, getMessages } from 'next-intl/server'
 import { Geist, Geist_Mono } from 'next/font/google'
-import { FC, ReactNode } from 'react'
+
+import { LayoutProps } from '@/types'
 
 import '@/styles/globals.css'
 
@@ -30,13 +32,10 @@ export const metadata: Metadata = {
     manifest: '/site.webmanifest'
 }
 
-type RootLayoutProps = {
-    children: ReactNode
-}
+const getDirection =
+    (locale: string) => ( locale === 'he' ? 'rtl' : 'ltr' )
 
-const getDirection = (locale: string) => ( locale === 'he' ? 'rtl' : 'ltr' )
-
-const RootLayout: FC<RootLayoutProps> = async ({ children }) => {
+const RootLayout: FC<LayoutProps> = async ({ children }) => {
     const locale = await getLocale()
     const messages = await getMessages()
 
