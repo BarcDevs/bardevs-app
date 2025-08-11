@@ -1,15 +1,10 @@
 import { Navbar } from '@/components/shared/navbar'
-import { useLanguage } from '@/context/language'
 
-export const HomePage = () => {
-    const { dir } = useLanguage()
-
-    return (
+export const HomePage = () =>
+    (
         <div
-            dir={dir}
             className="min-h-[100dvh] flex flex-col bg-white"
         >
             <Navbar/>
         </div>
     )
-}
