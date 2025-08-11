@@ -1,8 +1,15 @@
 'use client'
 
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select'
-import { useLocale } from 'next-intl'
 import { useRouter } from 'next/navigation'
+import { useLocale } from 'next-intl'
+
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue
+} from '@/components/ui/select'
 
 const LanguagePicker = () => {
     const currentLocale = useLocale()
