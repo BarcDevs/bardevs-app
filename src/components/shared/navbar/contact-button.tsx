@@ -1,10 +1,10 @@
 import { Button } from '@/components/ui/button'
 import { NAV_LINKS } from '@/constants/nav-links'
-import { useLanguage } from '@/context/language'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
 const ContactButton = ({}) => {
-    const { t } = useLanguage()
+    const t = useTranslations()
 
     return (
         <div className="md:hidden">

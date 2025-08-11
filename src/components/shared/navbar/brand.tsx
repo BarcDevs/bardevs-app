@@ -1,10 +1,10 @@
 import { NAV_LINKS } from '@/constants/nav-links'
-import { useLanguage } from '@/context/language'
+import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 
 const Brand = ({}) => {
-    const { t } = useLanguage()
+    const t = useTranslations()
 
     return (
         <Link

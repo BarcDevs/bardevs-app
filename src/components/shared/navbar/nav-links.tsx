@@ -1,11 +1,11 @@
 import NavLink from '@/components/shared/navbar/nav-link'
 import { Button } from '@/components/ui/button'
 import { NAV_LINKS } from '@/constants/nav-links'
-import { useLanguage } from '@/context/language'
+import { useTranslations } from 'next-intl'
 import Link from 'next/link'
 
 const NavLinks = ({}) => {
-    const { t } = useLanguage()
+    const t = useTranslations()
 
     return (
         <nav
