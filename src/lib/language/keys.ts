@@ -1,5 +1,4 @@
 export const Locales = {
-    brand: 'brand',
     nav_home: 'nav_home',
     nav_about: 'nav_about',
     nav_services: 'nav_services',

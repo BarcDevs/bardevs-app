@@ -1,5 +1,6 @@
 'use client'
 
+import { config } from '@/config'
 import { useTranslations } from 'next-intl'
 
 import FooterLinks from '@/components/shared/footer/footer-links'
@@ -17,7 +18,7 @@ export default function Footer () {
                 <div className="grid gap-8 md:grid-cols-3">
                     <div className="space-y-2">
                         <div className="text-lg font-semibold text-[#3e2f34]">
-                            {t(Locales.brand)}
+                            {config.brandName}
                         </div>
                         <p className="text-sm text-muted-foreground">
                             {year} • {t(Locales.footer_rights)}
