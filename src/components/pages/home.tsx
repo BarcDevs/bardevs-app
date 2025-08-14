@@ -1,3 +1,4 @@
+import Contact from '@/components/homepage/sections/contact'
 import { Hero } from '@/components/homepage/sections/hero'
 import Portfolio from '@/components/homepage/sections/portfolio'
 import Services from '@/components/homepage/sections/services'
@@ -6,6 +7,7 @@ import Testimonials from '@/components/homepage/sections/testimonials'
 import { Navbar } from '@/components/shared/navbar'
 import About from '@/components/homepage/sections/about'
 import Footer from '@/components/shared/footer'
+
 
 export const HomePage = () =>
     (
@@ -20,6 +22,7 @@ export const HomePage = () =>
                 <Services/>
                 <Portfolio/>
                 <Testimonials/>
+                <Contact/>
             </main>
             <Footer/>
         </div>
