@@ -1,3 +1,4 @@
+import { config } from '@/config'
 import { Locales } from '@/lib/language/keys'
 
 type NavLink = {
@@ -11,7 +12,7 @@ type NavLink = {
 export const NAV_LINKS: NavLink = {
     home: {
         href: '#home',
-        locale: Locales.brand
+        locale: config.brandName
     },
     about: {
         href: '#about',
