@@ -1,6 +1,6 @@
 'use client'
 
-import { HomePage } from '@/components/page/home'
+import { HomePage } from '@/components/pages/home'
 
 const Page = () => (
     <HomePage/>

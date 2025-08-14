@@ -1,6 +1,7 @@
 import { Hero } from '@/components/homepage/sections/hero'
-import Footer from '@/components/shared/footer'
 import { Navbar } from '@/components/shared/navbar'
+import About from '@/components/homepage/sections/about'
+import Footer from '@/components/shared/footer'
 
 export const HomePage = () =>
     (
@@ -10,6 +11,7 @@ export const HomePage = () =>
             <Navbar/>
             <main className="flex-1">
                 <Hero/>
+                <About/>
             </main>
             <Footer/>
         </div>
