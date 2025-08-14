@@ -1,7 +1,7 @@
 import type { NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
 
-export function middleware (request: NextRequest) {
+const middleware = (request: NextRequest) => {
     const response = NextResponse.next()
     const cookie = request.cookies.get('NEXT_LOCALE')?.value
 
@@ -15,3 +15,5 @@ export function middleware (request: NextRequest) {
 export const config = {
     matcher: ['/:path*']
 }
+
+export default middleware

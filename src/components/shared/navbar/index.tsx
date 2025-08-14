@@ -6,7 +6,7 @@ import LanguagePicker from '@/components/shared/navbar/language-picker'
 import NavLinks from '@/components/shared/navbar/nav-links'
 import { useEffect, useState } from 'react'
 
-export const Navbar = () => {
+const Navbar = () => {
     const [scrolled, setScrolled] = useState(false)
 
     useEffect(() => {
@@ -40,3 +40,5 @@ export const Navbar = () => {
         </header>
     )
 }
+
+export default Navbar

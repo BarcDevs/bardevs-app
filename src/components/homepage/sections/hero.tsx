@@ -9,7 +9,7 @@ import CTAs from '@/components/homepage/heroSection/CTAs'
 import FeatureChecklist from '@/components/homepage/heroSection/feature-checklist'
 import HeroBackground from '@/components/homepage/heroSection/hero-background'
 
-export const Hero = () => {
+const Hero = () => {
     const t = useTranslations()
 
     return (
@@ -47,3 +47,5 @@ export const Hero = () => {
         </section>
     )
 }
+
+export default Hero
