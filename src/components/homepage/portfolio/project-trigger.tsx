@@ -1,10 +1,10 @@
-import ProjectImage from '@/components/homepage/portfolioSection/project-image'
 import { useTranslations } from 'next-intl'
 import { FC } from 'react'
 
 import { DialogTrigger } from '@/components/ui/dialog'
 import { Locales } from '@/lib/language/keys'
 import { Project } from '@/types/project'
+import ProjectImage from '@/components/homepage/portfolio/project-image'
 
 type ProjectTriggerProps = {
     project: Project;

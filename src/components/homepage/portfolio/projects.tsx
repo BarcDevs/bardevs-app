@@ -1,7 +1,7 @@
-import ProjectDetails from '@/components/homepage/portfolioSection/project-details'
-import ProjectTrigger from '@/components/homepage/portfolioSection/project-trigger'
 import { Dialog } from '@/components/ui/dialog'
 import { PROJECTS } from '@/constants/portfolio/projects'
+import ProjectDetails from '@/components/homepage/portfolio/project-details'
+import ProjectTrigger from '@/components/homepage/portfolio/project-trigger'
 
 const Projects = ({}) =>
     (

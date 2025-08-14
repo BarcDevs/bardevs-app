@@ -4,10 +4,10 @@ import { useTranslations } from 'next-intl'
 import { FileCode } from 'lucide-react'
 
 import { Locales } from '@/lib/language/keys'
-import CodePreview from '@/components/homepage/heroSection/codePreview'
-import CTAs from '@/components/homepage/heroSection/CTAs'
-import FeatureChecklist from '@/components/homepage/heroSection/feature-checklist'
-import HeroBackground from '@/components/homepage/heroSection/hero-background'
+import CodePreview from '@/components/homepage/hero/codePreview'
+import CTAs from '@/components/homepage/hero/CTAs'
+import FeatureChecklist from '@/components/homepage/hero/feature-checklist'
+import HeroBackground from '@/components/homepage/hero/hero-background'
 
 const Hero = () => {
     const t = useTranslations()

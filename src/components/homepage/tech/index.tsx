@@ -1,7 +1,7 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import Techs from '@/components/homepage/techSection/techs'
+import Techs from '@/components/homepage/tech/techs'
 import { Locales } from '@/lib/language/keys'
 
 const Tech = () => {

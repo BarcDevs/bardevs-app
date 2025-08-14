@@ -1,7 +1,7 @@
 'use client'
 
-import ContactHeader from '@/components/homepage/contactSection/contact-header'
-import ContactForm from '@/components/homepage/contactSection/form/contact-form'
+import ContactHeader from '@/components/homepage/contact/contact-header'
+import ContactForm from '@/components/homepage/contact/form/contact-form'
 
 const Contact = () => {
     return (

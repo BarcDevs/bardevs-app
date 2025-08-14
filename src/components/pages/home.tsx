@@ -1,11 +1,11 @@
-import Contact from '@/components/homepage/sections/contact'
-import Hero from '@/components/homepage/sections/hero'
-import Portfolio from '@/components/homepage/sections/portfolio'
-import Services from '@/components/homepage/sections/services'
-import Tech from '@/components/homepage/sections/tech'
-import Testimonials from '@/components/homepage/sections/testimonials'
+import Contact from '@/components/homepage/contact'
+import Hero from '@/components/homepage/hero'
+import Portfolio from '@/components/homepage/portfolio'
+import Services from '@/components/homepage/services'
+import Tech from '@/components/homepage/tech'
+import Testimonials from '@/components/homepage/testimonials'
 import Navbar from '@/components/shared/navbar'
-import About from '@/components/homepage/sections/about'
+import About from '@/components/homepage/about'
 import Footer from '@/components/shared/footer'
 
 const HomePage = () =>

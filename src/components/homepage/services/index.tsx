@@ -2,7 +2,7 @@
 
 import { Locales } from '@/lib/language/keys'
 import { useTranslations } from 'next-intl'
-import ServiceList from '../servicesSection/service-list'
+import ServiceList from '../services/service-list'
 
 const Services = () => {
     const t = useTranslations()

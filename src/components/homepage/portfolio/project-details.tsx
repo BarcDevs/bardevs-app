@@ -6,8 +6,8 @@ import {
     DialogHeader,
     DialogTitle
 } from '@/components/ui/dialog'
-import ProjectImage from '@/components/homepage/portfolioSection/project-image'
-import ProjectLink from '@/components/homepage/portfolioSection/project-link'
+import ProjectImage from '@/components/homepage/portfolio/project-image'
+import ProjectLink from '@/components/homepage/portfolio/project-link'
 
 type ProjectDetailsProps = {
     project: Project

@@ -1,5 +1,5 @@
-import WindowHeader from '@/components/homepage/heroSection/codePreview/window-header'
-import FloatingMetrics from '@/components/homepage/heroSection/codePreview/floating-metrics'
+import WindowHeader from '@/components/homepage/hero/codePreview/window-header'
+import FloatingMetrics from '@/components/homepage/hero/codePreview/floating-metrics'
 import { CODE } from '@/constants/hero/code'
 
 const Index = ({}) =>

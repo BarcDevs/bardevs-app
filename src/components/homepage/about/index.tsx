@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 import { Locales } from '@/lib/language/keys'
-import Skills from '@/components/homepage/aboutSection/skills'
+import Skills from '@/components/homepage/about/skills'
 
 const About = () => {
     const t = useTranslations()
