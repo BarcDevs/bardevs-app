@@ -39,6 +39,8 @@
   "contact_message": "הודעה",
   "contact_send": "שליחה",
   "contact_or": "או דברו איתי דרך",
+  "contact_success_message": "תודה! נשוב אליך בהקדם",
+  "contact_error_message": "מצטערים, התרחשה שגיאה בדרך...",
   "contact_placeholder_name": "ישראל ישראלי",
   "contact_placeholder_message": "כיצד אוכל לעזור?",
   "footer_quick_links": "קישורים מהירים",

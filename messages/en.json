@@ -39,6 +39,8 @@
   "contact_message": "Message",
   "contact_send": "Send message",
   "contact_or": "or reach me on",
+  "contact_success_message": "Thanks! We’ll get back to you soon!",
+  "contact_error_message": "Sorry, there was an error sending your message.",
   "contact_placeholder_name": "John Doe",
   "contact_placeholder_message": "How can I help?",
   "footer_quick_links": "Quick links",
