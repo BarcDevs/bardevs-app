@@ -21,7 +21,7 @@ export default function Footer () {
                             {appConfig.brandName}
                         </div>
                         <p className="text-sm text-muted-foreground">
-                            {year} • {t(Locales.footer_rights)}
+                            {year} • &copy; {t(Locales.footer_rights)}
                         </p>
                     </div>
 
