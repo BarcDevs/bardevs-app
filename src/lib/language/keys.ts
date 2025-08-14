@@ -30,6 +30,7 @@ export const Locales = {
     service_maintenance_desc: 'service_maintenance_desc',
     portfolio_title: 'portfolio_title',
     portfolio_more: 'portfolio_more',
+    portfolio_preview: 'portfolio_preview',
     testimonials_title: 'testimonials_title',
     testimonial_1: 'testimonial_1',
     testimonial_2: 'testimonial_2',
