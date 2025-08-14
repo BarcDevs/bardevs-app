@@ -29,15 +29,17 @@ const LanguagePicker = () => {
             onValueChange={(value: 'en' | 'he') => onLanguagePick(value)}
         >
             <SelectTrigger
-                className="w-[110px]"
+                className="cursor-pointer cw-[110px]"
                 aria-label="Language"
             >
                 <SelectValue placeholder="Language"/>
             </SelectTrigger>
 
-            <SelectContent align={currentLocale === 'he' ? 'start' : 'end'}>
-                <SelectItem value="en">English</SelectItem>
-                <SelectItem value="he">עברית</SelectItem>
+            <SelectContent
+                align={currentLocale === 'he' ? 'start' : 'end'}
+            >
+                <SelectItem className="cursor-pointer" value="en">English</SelectItem>
+                <SelectItem className="cursor-pointer" value="he">עברית</SelectItem>
             </SelectContent>
         </Select>
     )

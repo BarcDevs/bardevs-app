@@ -84,7 +84,7 @@ const ContactForm = () => {
                     <Button
                         type="submit"
                         disabled={status === 'loading' || isSubmitting}
-                        className="bg-[#77c6b0] text-[#3e2f34] hover:bg-[#5fbba2] disabled:opacity-50"
+                        className="cursor-pointer bg-[#77c6b0] text-[#3e2f34] hover:bg-[#5fbba2] disabled:opacity-50"
                     >
                         <Icon
                             name="mail"

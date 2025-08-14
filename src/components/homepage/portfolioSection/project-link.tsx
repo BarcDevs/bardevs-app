@@ -21,7 +21,7 @@ const ProjectLink: FC<ProjectLinkProps> = ({ link }) => {
                 rel="noopener noreferrer"
             >
                 <Button variant="outline"
-                        className="gap-2 border-[#77c6b0] text-[#3e2f34]">
+                        className="cursor-pointer gap-2 border-[#77c6b0] text-[#3e2f34]">
                     <ExternalLink className="h-4 w-4"/>
                     {t(Locales.portfolio_preview)}
                 </Button>

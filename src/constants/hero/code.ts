@@ -8,7 +8,7 @@ export const CODE =
       <p className="text-muted-foreground">
         ${'{t(\'hero_subtitle\')}'}
       </p>
-      <button className="bg-[#77c6b0] text-[#3e2f34] px-4 py-2 rounded">
+      <button className="cursor-pointer bg-[#77c6b0] text-[#3e2f34] px-4 py-2 rounded">
         ${'{t(\'hero_cta\')}'}
       </button>
     </section>

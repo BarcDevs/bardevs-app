@@ -16,7 +16,7 @@ const ProjectTrigger: FC<ProjectTriggerProps> = ({ project }) => {
     return (
         <DialogTrigger asChild>
             <button
-                className="group relative overflow-hidden rounded-lg border bg-white text-left transition hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#77c6b0]"
+                className="cursor-pointer group relative overflow-hidden rounded-lg border bg-white text-left transition hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#77c6b0]"
                 aria-label={`${project.title} — ${t(Locales.portfolio_more)}`}
             >
                 <ProjectImage

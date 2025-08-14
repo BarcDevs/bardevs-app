@@ -11,7 +11,7 @@ const CTAs = ({}) => {
         <div className="flex flex-wrap items-center gap-3 pt-2">
             <Link href="#contact">
                 <Button
-                    className="h-11 px-6 bg-[#77c6b0] text-[#3e2f34] hover:bg-[#5fbba2]"
+                    className="cursor-pointer h-11 px-6 bg-[#77c6b0] text-[#3e2f34] hover:bg-[#5fbba2]"
                     aria-label={t(Locales.hero_cta)}
                 >
                     {t(Locales.hero_cta)}
