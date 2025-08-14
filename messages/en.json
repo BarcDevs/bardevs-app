@@ -39,6 +39,8 @@
   "contact_message": "Message",
   "contact_send": "Send message",
   "contact_or": "or reach me on",
+  "contact_placeholder_name": "John Doe",
+  "contact_placeholder_message": "How can I help?",
   "footer_quick_links": "Quick links",
   "footer_rights": "All rights reserved.",
   "tech_title": "Technologies",

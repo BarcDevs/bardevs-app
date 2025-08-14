@@ -39,6 +39,8 @@ export const Locales = {
     contact_message: 'contact_message',
     contact_send: 'contact_send',
     contact_or: 'contact_or',
+    contact_placeholder_name: 'contact_placeholder_name',
+    contact_placeholder_message: 'contact_placeholder_message',
     footer_quick_links: 'footer_quick_links',
     footer_rights: 'footer_rights',
     tech_title: 'tech_title',
