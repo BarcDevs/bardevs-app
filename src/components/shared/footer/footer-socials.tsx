@@ -5,7 +5,7 @@ const FooterSocials = ({}) => {
 
     return (
         <div>
-            <div className="text-sm font-medium text-[#3e2f34]">
+            <div className="font-sans text-sm font-medium text-[#3e2f34]">
                 Social
             </div>
 

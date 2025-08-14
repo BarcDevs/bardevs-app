@@ -17,10 +17,10 @@ export default function Footer () {
             <div className="container mx-auto px-4 py-10">
                 <div className="grid gap-8 md:grid-cols-3">
                     <div className="space-y-2">
-                        <div className="text-lg font-semibold text-[#3e2f34]">
+                        <div className="font-sans text-lg font-semibold text-[#3e2f34]">
                             {appConfig.brandName}
                         </div>
-                        <p className="text-sm text-muted-foreground">
+                        <p className="font-sans text-sm text-muted-foreground">
                             {year} • &copy; {t(Locales.footer_rights)}
                         </p>
                     </div>

@@ -9,7 +9,7 @@ const Brand = ({}) => {
     return (
         <Link
             href={NAV_LINKS.home.href}
-            className="flex items-center gap-2"
+            className="font-mono flex items-center gap-2"
             aria-label={NAV_LINKS.home.locale}
         >
             <div
@@ -22,8 +22,7 @@ const Brand = ({}) => {
                     className="size-7"
                 />
             </div>
-            <span className="font-bold tracking-tight text-[#3e2f34]">
-                {/*TODO: change font*/}
+            <span className="font-mono font-bold tracking-tight text-[#3e2f34]">
                 {NAV_LINKS.home.locale}
             </span>
         </Link>

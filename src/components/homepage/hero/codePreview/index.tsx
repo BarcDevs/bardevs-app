@@ -9,7 +9,8 @@ const Index = ({}) =>
                 <WindowHeader/>
 
                 <div className="relative">
-                    <pre className="m-0 max-h-[360px] overflow-auto bg-white px-4 py-4 text-xs leading-relaxed">
+                    <pre
+                        className="font-mono m-0 max-h-[360px] overflow-auto bg-white px-4 py-4 text-xs leading-relaxed">
                         {CODE}
                     </pre>
                 </div>
