@@ -1,4 +1,5 @@
 import { Hero } from '@/components/homepage/sections/hero'
+import Portfolio from '@/components/homepage/sections/portfolio'
 import Services from '@/components/homepage/sections/services'
 import Tech from '@/components/homepage/sections/tech'
 import { Navbar } from '@/components/shared/navbar'
@@ -16,6 +17,7 @@ export const HomePage = () =>
                 <About/>
                 <Tech/>
                 <Services/>
+                <Portfolio/>
             </main>
             <Footer/>
         </div>
