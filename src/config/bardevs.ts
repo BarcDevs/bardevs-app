@@ -1,4 +1,4 @@
-export const config = {
+export const appConfig = {
     brandName: 'BarDevs',
     socials: {
         github: 'https://github.com/BarcDevs/',

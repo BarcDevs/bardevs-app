@@ -1,5 +1,5 @@
 import SocialLink from '@/components/shared/footer/social-link'
-import { config } from '@/config'
+import { appConfig } from '@/config/bardevs'
 
 const FooterSocials = ({}) => {
 
@@ -11,15 +11,15 @@ const FooterSocials = ({}) => {
 
             <div className="mt-3 flex items-center gap-3">
                 <SocialLink
-                    href={config.socials.github}
+                    href={appConfig.socials.github}
                     label={'GitHub'}
                 />
                 <SocialLink
-                    href={config.socials.linkedin}
+                    href={appConfig.socials.linkedin}
                     label={'LinkedIn'}
                 />
                 <SocialLink
-                    href={config.socials.facebook}
+                    href={appConfig.socials.facebook}
                     label={'Facebook'}
                 />
             </div>
