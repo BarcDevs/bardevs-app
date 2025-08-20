@@ -1,12 +1,9 @@
 import { NAV_LINKS } from '@/constants/nav-links'
-import { useTranslations } from 'next-intl'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const Brand = ({}) => {
-    const t = useTranslations()
-
-    return (
+const Brand = ({}) =>
+    (
         <Link
             href={NAV_LINKS.home.href}
             className="font-mono flex items-center gap-2"
@@ -27,6 +24,5 @@ const Brand = ({}) => {
             </span>
         </Link>
     )
-}
 
 export default Brand
