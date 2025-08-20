@@ -40,14 +40,15 @@ export const PROJECTS: Project[] = [
         link: 'https://corporate-website-five-kappa.vercel.app/'
     },
     {
-        title: 'Booking Platform',
+        title: 'Nike landing page',
         description:
-            'Full‑stack booking system with payments and calendar integration.',
+            'Landing page example based on nike brand.',
         image: {
             w: 640,
             h: 420,
-            query: 'booking platform clean ui calendar'
+            query: 'Nike landing page hero section',
+            src: 'nike-landing-page-hero'
         },
-        link: '#'
+        link: 'https://nike-landing-page-lyart.vercel.app/'
     }
 ]
