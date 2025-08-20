@@ -4,13 +4,14 @@ import { Project } from '@/types/project'
 
 export const PROJECTS: Project[] = [
     {
-        title: 'SaaS Marketing Site',
+        title: 'HealEase (on development)',
         description:
-            'High-performance marketing website with A/B-tested landing pages and CMS.',
+            'AI-powered full-stack platform designed to empower and facilitate the rehabilitation of severely injured patients.',
         image: {
             w: 640,
             h: 420,
-            query: 'saas marketing website landing page ui teal neutral'
+            query: 'HealEase main page preview',
+            src: 'healease-main-screen-image'
         },
         link: '#'
     },
