@@ -9,8 +9,8 @@ type TechImageProps = {
 const TechImage: FC<TechImageProps> = ({ logo }) => (
     <Image
         src={`/icons/technologies/${logo.path}.svg`}
-        width={logo.w}
-        height={logo.h}
+        width={64}
+        height={64}
         alt={logo.query}
         className={'h-full w-full object-contain p-2'}
     />
