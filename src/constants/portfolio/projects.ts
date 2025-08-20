@@ -28,15 +28,16 @@ export const PROJECTS: Project[] = [
         link: 'https://promptopia-eight-plum.vercel.app/'
     },
     {
-        title: 'Admin Dashboard',
+        title: 'Corporate app',
         description:
-            'Custom analytics dashboard with charts, roles, and real-time updates.',
+            'custom example landing page.',
         image: {
             w: 640,
             h: 420,
-            query: 'admin dashboard analytics charts clean ui'
+            query: 'Website hero section',
+            src: 'corporate-app-hero-section'
         },
-        link: '#'
+        link: 'https://corporate-website-five-kappa.vercel.app/'
     },
     {
         title: 'Booking Platform',
