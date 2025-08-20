@@ -1,3 +1,4 @@
+import ProjectImagesCarousel from '@/components/homepage/portfolio/project-images-carousel'
 import { FC } from 'react'
 
 import { Project } from '@/types/project'
@@ -6,7 +7,6 @@ import {
     DialogHeader,
     DialogTitle
 } from '@/components/ui/dialog'
-import ProjectImage from '@/components/homepage/portfolio/project-image'
 import ProjectLink from '@/components/homepage/portfolio/project-link'
 
 type ProjectDetailsProps = {
@@ -23,10 +23,9 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({ project }) =>
             </DialogHeader>
 
             <div className="grid gap-4">
-                <ProjectImage
-                    project={project}
-                    variant={'detail'}
-                />
+                <div className={'flex justify-center'}>
+                    <ProjectImagesCarousel project={project}/>
+                </div>
                 <p className="text-sm text-muted-foreground">
                     {project.description}
                 </p>
