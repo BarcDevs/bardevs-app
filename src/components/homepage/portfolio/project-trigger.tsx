@@ -26,7 +26,7 @@ const ProjectTrigger: FC<ProjectTriggerProps> = ({ project }) => {
                 <div
                     className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 transition group-hover:opacity-100"
                 />
-                <div className="absolute inset-x-0 bottom-0 p-3 text-white">
+                <div className="absolute inset-x-0 bottom-0 p-3 font-semibold text-gray-400">
                     <div className="flex items-center justify-between">
                         <span className="font-medium">
                             {project.title}

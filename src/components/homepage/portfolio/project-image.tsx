@@ -13,11 +13,12 @@ const ProjectImage: FC<ProjectImageProps> = ({
     variant = 'preview',
     scale
 }) => {
-    const { w, h } = project.image
+    const { w, h, src } = project.image
 
     const factor = scale ?? ( variant === 'detail' ? 1.2 : 1 )
     const width = w && Math.round(w * factor)
     const height = h && Math.round(h * factor)
+    const projectImage = src ? `/projects/${src}.png` : undefined
 
     const variantClasses = {
         preview: 'aspect-[16/11]',
@@ -26,8 +27,8 @@ const ProjectImage: FC<ProjectImageProps> = ({
 
     return (
         <Image
-            src={project.image.src ??
-                `/placeholder.svg?height=${height}&width=${width}&query=${
+            src={projectImage ??
+                `/projects/placeholder.svg?query=${
                     encodeURIComponent(
                         project.image.query
                     )}`}
