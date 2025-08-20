@@ -1,7 +1,5 @@
 import { Project } from '@/types/project'
 
-// TODO: add real projects
-
 export const PROJECTS: Project[] = [
     {
         title: 'HealEase (on development)',
