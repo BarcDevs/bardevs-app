@@ -3,4 +3,5 @@ export type Image = {
     h?: number
     query: string
     src?: string
+    path?: string
 }
