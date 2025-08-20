@@ -20,7 +20,10 @@ const ProjectImagesCarousel: FC<ProjectImagesCarouselProps> = ({ images }) =>
         <Carousel className="w-full max-w-xl">
             <CarouselContent>
                 {images.map((image) => (
-                    <CarouselItem key={image.query}>
+                    <CarouselItem
+                        key={image.query}
+                        className={'flex items-center'}
+                    >
                         <ProjectImage
                             variant={'detail'}
                             src={image.src}
