@@ -1,4 +1,3 @@
-import Image from 'next/image'
 import {
     Tooltip,
     TooltipContent,
@@ -6,6 +5,7 @@ import {
     TooltipTrigger
 } from '@/components/ui/tooltip'
 import { TECHS } from '@/constants/tech/techs'
+import TechImage from '@/components/homepage/tech/tech-image'
 
 const Techs = ({}) => (
     <TooltipProvider>
@@ -23,15 +23,8 @@ const Techs = ({}) => (
                         >
                             <div
                                 className="relative h-12 w-12 shrink-0 overflow-hidden rounded-md ring-1 ring-[#77c6b0]/30 bg-white">
-                                <Image
-                                    src={`/placeholder.svg?height=${tech.logo.h}&width=${tech.logo.w}&query=${
-                                        encodeURIComponent(
-                                            tech.logo.query
-                                        )}`}
-                                    width={tech.logo.w}
-                                    height={tech.logo.h}
-                                    alt={`${tech.name} logo`}
-                                    className={'h-full w-full object-contain p-2'}
+                                <TechImage
+                                    logo={tech.logo}
                                 />
                             </div>
                             <div className="flex-1">
