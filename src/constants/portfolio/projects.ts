@@ -16,15 +16,16 @@ export const PROJECTS: Project[] = [
         link: '#'
     },
     {
-        title: 'E‑commerce UI',
+        title: 'Promptopia',
         description:
-            'Modern storefront with product filters, fast search, and responsive UI.',
+            'A full-stack website for sharing useful AI prompts. you can read other\'s prompts or create some by your own.',
         image: {
             w: 640,
             h: 420,
-            query: 'ecommerce product grid modern ui clean'
+            query: 'Promptopia dashboard',
+            src: 'promptopia-dashboard'
         },
-        link: '#'
+        link: 'https://promptopia-eight-plum.vercel.app/'
     },
     {
         title: 'Admin Dashboard',
