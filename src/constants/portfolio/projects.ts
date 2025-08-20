@@ -8,8 +8,6 @@ export const PROJECTS: Project[] = [
         description:
             'AI-powered full-stack platform designed to empower and facilitate the rehabilitation of severely injured patients.',
         image: {
-            w: 640,
-            h: 420,
             query: 'HealEase main page preview',
             src: 'healease-main-screen-image'
         },
@@ -20,8 +18,6 @@ export const PROJECTS: Project[] = [
         description:
             'A full-stack website for sharing useful AI prompts. you can read other\'s prompts or create some by your own.',
         image: {
-            w: 640,
-            h: 420,
             query: 'Promptopia dashboard',
             src: 'promptopia-dashboard'
         },
@@ -32,8 +28,6 @@ export const PROJECTS: Project[] = [
         description:
             'custom example landing page.',
         image: {
-            w: 640,
-            h: 420,
             query: 'Website hero section',
             src: 'corporate-app-hero-section'
         },
@@ -44,8 +38,6 @@ export const PROJECTS: Project[] = [
         description:
             'Landing page example based on nike brand.',
         image: {
-            w: 640,
-            h: 420,
             query: 'Nike landing page hero section',
             src: 'nike-landing-page-hero'
         },
