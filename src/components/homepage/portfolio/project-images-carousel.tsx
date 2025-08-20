@@ -1,5 +1,6 @@
 'use client'
 
+import { FC } from 'react'
 import ProjectImage from '@/components/homepage/portfolio/project-image'
 import {
     Carousel,
@@ -8,22 +9,22 @@ import {
     CarouselNext,
     CarouselPrevious
 } from '@/components/ui/carousel'
-import { Project } from '@/types/project'
-import { FC } from 'react'
+import { Image } from '@/types/image'
 
 type ProjectImagesCarouselProps = {
-    project: Project;
+    images: Image[]
 }
 
-const ProjectImagesCarousel: FC<ProjectImagesCarouselProps> = ({ project }) =>
+const ProjectImagesCarousel: FC<ProjectImagesCarouselProps> = ({ images }) =>
     (
         <Carousel className="w-full max-w-xl">
             <CarouselContent>
-                {Array.from({ length: 5 }).map((_, index) => (
-                    <CarouselItem key={index}>
+                {images.map((image) => (
+                    <CarouselItem key={image.query}>
                         <ProjectImage
-                            project={project}
                             variant={'detail'}
+                            src={image.src}
+                            query={image.query}
                         />
                     </CarouselItem>
                 ))}
