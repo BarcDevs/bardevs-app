@@ -7,10 +7,20 @@ export const PROJECTS: Project[] = [
         title: 'HealEase (on development)',
         description:
             'AI-powered full-stack platform designed to empower and facilitate the rehabilitation of severely injured patients.',
-        image: {
-            query: 'HealEase main page preview',
-            src: 'healease-main-screen-image'
-        },
+        image: [
+            {
+                query: 'HealEase main page preview',
+                src: 'HealEase/hero'
+            },
+            {
+                query: 'HealEase preview section',
+                src: 'HealEase/preview'
+            },
+            {
+                query: 'HealEase features',
+                src: 'HealEase/features'
+            }
+        ],
         link: '#'
     },
     {
