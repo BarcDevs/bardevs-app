@@ -1,3 +1,4 @@
+import ProjectImage from '@/components/homepage/portfolio/project-image'
 import ProjectImagesCarousel from '@/components/homepage/portfolio/project-images-carousel'
 import { FC } from 'react'
 
@@ -23,9 +24,16 @@ const ProjectDetails: FC<ProjectDetailsProps> = ({ project }) =>
             </DialogHeader>
 
             <div className="grid gap-4">
-                <div className={'flex justify-center'}>
-                    <ProjectImagesCarousel project={project}/>
-                </div>
+                {
+                    Array.isArray(project.image) ?
+                        <div className={'flex justify-center'}>
+                            <ProjectImagesCarousel images={project.image}/>
+                        </div> :
+                        <ProjectImage
+                            variant={'detail'}
+                            src={project.image.src}
+                            query={project.image.query}
+                        />}
                 <p className="text-sm text-muted-foreground">
                     {project.description}
                 </p>
