@@ -18,8 +18,7 @@ export const PROJECTS: Project[] = [
                 query: 'HealEase features',
                 src: 'HealEase/features'
             }
-        ],
-        link: '#'
+        ]
     },
     {
         title: 'Promptopia',
