@@ -17,10 +17,20 @@ export const PROJECTS: Project[] = [
         title: 'Promptopia',
         description:
             'A full-stack website for sharing useful AI prompts. you can read other\'s prompts or create some by your own.',
-        image: {
-            query: 'Promptopia dashboard',
-            src: 'promptopia-dashboard'
-        },
+        image: [
+            {
+                query: 'Promptopia dashboard',
+                src: 'promptopia/dashboard'
+            },
+            {
+                query: 'Create prompt',
+                src: 'promptopia/create'
+            },
+            {
+                query: 'User profile',
+                src: 'promptopia/profile'
+            }
+        ],
         link: 'https://promptopia-eight-plum.vercel.app/'
     },
     {
