@@ -2,6 +2,7 @@
 
 import { Button } from '@/components/ui/button'
 import Icon from '@/components/shared/icon'
+import { apiClient } from '@/lib/axios'
 import { Locales } from '@/lib/language/keys'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useTranslations } from 'next-intl'
@@ -31,13 +32,7 @@ const ContactForm = () => {
         setStatus('loading')
 
         try {
-            const res = await fetch('/api/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            })
-
-            if ( !res.ok ) throw new Error('Failed')
+            await apiClient.post('/contact', data)
 
             setStatus('success')
             reset()
@@ -90,7 +85,10 @@ const ContactForm = () => {
                             name="mail"
                             className="me-2"
                         />
-                        {status === 'loading' || isSubmitting ? 'Sending...' : t('contact_send')}
+                        {status === 'loading' || isSubmitting ?
+                            'Sending...' :
+                            t('contact_send')
+                        }
                     </Button>
 
                     <ContactLinks/>
