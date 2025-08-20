@@ -16,7 +16,7 @@ const ProjectTrigger: FC<ProjectTriggerProps> = ({ project }) => {
     return (
         <DialogTrigger asChild>
             <button
-                className="cursor-pointer group relative overflow-hidden rounded-lg border bg-white text-left transition hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#77c6b0]"
+                className="group cursor-pointer group relative overflow-hidden rounded-lg border bg-white text-left transition hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-[#77c6b0]"
                 aria-label={`${project.title} — ${t(Locales.portfolio_more)}`}
             >
                 <ProjectImage
@@ -26,7 +26,7 @@ const ProjectTrigger: FC<ProjectTriggerProps> = ({ project }) => {
                 <div
                     className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 transition group-hover:opacity-100"
                 />
-                <div className="absolute inset-x-0 bottom-0 p-3 font-semibold text-gray-400">
+                <div className="absolute inset-x-0 bottom-0 p-3 font-semibold text-gray-800 group-hover:text-white">
                     <div className="flex items-center justify-between">
                         <span className="font-medium">
                             {project.title}
