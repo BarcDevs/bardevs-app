@@ -35,12 +35,21 @@ export const PROJECTS: Project[] = [
     },
     {
         title: 'Corporate app',
-        description:
-            'custom example landing page.',
-        image: {
-            query: 'Website hero section',
-            src: 'corporate-app-hero-section'
-        },
+        description: 'custom example landing page.',
+        image: [
+            {
+                query: 'Website hero section',
+                src: 'corporate-app/hero'
+            },
+            {
+                query: 'Website quote form',
+                src: 'corporate-app/quote-form'
+            },
+            {
+                query: 'Website service and testimonials sections',
+                src: 'corporate-app/services-and-testimonials'
+            }
+        ],
         link: 'https://corporate-website-five-kappa.vercel.app/'
     },
     {
