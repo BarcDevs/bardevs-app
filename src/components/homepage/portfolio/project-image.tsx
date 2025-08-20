@@ -1,23 +1,20 @@
 import Image from 'next/image'
 import { FC } from 'react'
-import { Project } from '@/types/project'
 
 type ProjectImageProps = {
-    project: Project;
     variant?: 'preview' | 'detail';
-    scale?: number;
+    query: string;
+    src?: string;
 }
 
 const ProjectImage: FC<ProjectImageProps> = ({
-    project,
     variant = 'preview',
-    scale
+    query,
+    src
 }) => {
-    const { w, h, src } = project.image
-
-    const factor = scale ?? ( variant === 'detail' ? 1.2 : 1 )
-    const width = w && Math.round(w * factor)
-    const height = h && Math.round(h * factor)
+    const factor = variant === 'detail' ? 1.2 : 1
+    const width = Math.round(640 * factor)
+    const height = Math.round(420 * factor)
     const projectImage = src ? `/projects/${src}.png` : '/projects/placeholder.svg'
 
     const variantClasses = {
@@ -29,11 +26,11 @@ const ProjectImage: FC<ProjectImageProps> = ({
         <Image
             src={`${projectImage}?query=${
                 encodeURIComponent(
-                    project.image.query
+                    query
                 )}`}
             width={width}
             height={height}
-            alt={`${project.title} ${variant}`}
+            alt={query}
             className={`w-full object-cover ${variantClasses[ variant ] || ''}`}
         />
     )

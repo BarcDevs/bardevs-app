@@ -12,6 +12,10 @@ type ProjectTriggerProps = {
 
 const ProjectTrigger: FC<ProjectTriggerProps> = ({ project }) => {
     const t = useTranslations()
+    const image =
+        Array.isArray(project.image) ?
+            project.image[ 0 ] :
+            project.image
 
     return (
         <DialogTrigger asChild>
@@ -20,7 +24,8 @@ const ProjectTrigger: FC<ProjectTriggerProps> = ({ project }) => {
                 aria-label={`${project.title} — ${t(Locales.portfolio_more)}`}
             >
                 <ProjectImage
-                    project={project}
+                    src={image.src}
+                    query={image.query}
                     variant={'preview'}
                 />
                 <div
