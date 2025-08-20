@@ -54,12 +54,33 @@ export const PROJECTS: Project[] = [
     },
     {
         title: 'Nike landing page',
-        description:
-            'Landing page example based on nike brand.',
-        image: {
-            query: 'Nike landing page hero section',
-            src: 'nike-landing-page-hero'
-        },
+        description: 'Landing page example based on nike brand.',
+        image: [
+            {
+                query: 'Nike landing page hero section',
+                src: 'nike-landing-page/hero'
+            },
+            {
+                query: 'Nike landing page our products section',
+                src: 'nike-landing-page/our-products'
+            },
+            {
+                query: 'Nike landing services highlights',
+                src: 'nike-landing-page/highlight'
+            },
+            {
+                query: 'Nike landing page special offer',
+                src: 'nike-landing-page/promo'
+            },
+            {
+                query: 'Nike landing page testimonials section',
+                src: 'nike-landing-page/testimonials'
+            },
+            {
+                query: 'Nike landing footer',
+                src: 'nike-landing-page/footer'
+            }
+        ],
         link: 'https://nike-landing-page-lyart.vercel.app/'
     }
 ]
