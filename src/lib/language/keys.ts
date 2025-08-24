@@ -46,7 +46,8 @@ export const Locales = {
     footer_quick_links: 'footer_quick_links',
     footer_rights: 'footer_rights',
     tech_title: 'tech_title',
-    tech_subtitle: 'tech_subtitle'
+    tech_subtitle: 'tech_subtitle',
+    whatsapp_default_message: 'whatsapp_default_message'
 } as const
 
 export type LocaleKeys = keyof typeof Locales

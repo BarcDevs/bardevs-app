@@ -8,7 +8,7 @@ import { Locales } from '@/lib/language/keys'
 
 const ContactLinks = () => {
     const t = useTranslations()
-    const initialMessage = encodeURIComponent(appConfig.whatsapp.message)
+    const initialMessage = encodeURIComponent(t(Locales.whatsapp_default_message))
 
     return (
         <div className="flex flex-wrap items-center gap-3">

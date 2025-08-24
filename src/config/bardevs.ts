@@ -7,7 +7,6 @@ export const appConfig = {
     },
     whatsapp: {
         number: '972552644558',
-        message: 'Hello Bar, I’m interested in a professional website. Can you share more details?'
     },
     email: 'barcprodevelopments@gmail.com'
 }
