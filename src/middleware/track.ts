@@ -1,3 +1,4 @@
+import { createSessionEntry } from '@/services/session-service'
 import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 import { nanoid } from 'nanoid'
@@ -27,22 +28,32 @@ export const trackingMiddleware = (
     const parser = new UAParser(userAgent)
     const deviceInfo = parser.getResult()
 
-    // Collect other metadata
-    const language = req.headers.get('accept-language') || ''
-    const referrer = req.headers.get('referer') || ''
     const ip =
         req.headers.get('x-forwarded-for')?.split(',')[ 0 ] ||
         req.headers.get('x-real-ip') ||
         'unknown'
 
-    // Attach to request headers
-    res.headers.set('x-session-id', sessionId)
-    res.headers.set('x-browser', deviceInfo.browser.name || '')
-    res.headers.set('x-os', deviceInfo.os.name || '')
-    res.headers.set('x-device', deviceInfo.device.type || 'desktop')
-    res.headers.set('x-language', language)
-    res.headers.set('x-referrer', referrer)
-    res.headers.set('x-ip', ip)
+    const session = {
+        ip,
+        sessionId,
+        browser: deviceInfo.browser.name,
+        os: deviceInfo.os.name,
+        device: deviceInfo.device.type || 'desktop',
+        language: req.headers.get('accept-language'),
+        referrer: req.headers.get('referer')
+    }
+
+    Object
+        .entries(session)
+        .forEach(([key, value]) => {
+            if ( !value ) return
+            res.headers.set(`x-${
+                key === 'sessionId' ?
+                    'session-id' : key
+            }`, `${value}`)
+        })
+
+    await createSessionEntry(session)
 
     return res
 }
