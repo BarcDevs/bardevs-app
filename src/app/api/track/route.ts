@@ -10,14 +10,11 @@ export const GET = async (req: NextRequest) => {
 
     const headers = req.headers
     const cookies = req.cookies
-    let sessionId = cookies.get('session_id')?.value
-
-    if ( sessionId )
-        return NextResponse.json({ sessionId })
+    const sessionId =
+        cookies.get('session_id')?.value ||
+        nanoid()
 
     const source = headers.get('x-source')
-
-    sessionId = nanoid()
 
     const parser = new UAParser(req.headers.get('user-agent') || '')
     const deviceInfo = parser.getResult()

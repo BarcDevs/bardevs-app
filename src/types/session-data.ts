@@ -7,4 +7,5 @@ export type SessionData = {
     userAgent?: string
     referrer?: string | null
     language?: string | null
+    location?: string | null
 }
