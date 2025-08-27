@@ -1,4 +1,9 @@
-import { Schema, model, models } from 'mongoose'
+import {
+    Schema,
+    model,
+    models,
+    InferSchemaType
+} from 'mongoose'
 
 const contactSubmissionSchema = new Schema(
     {
@@ -29,9 +34,9 @@ const contactSubmissionSchema = new Schema(
     }
 )
 
-const ContactSubmission =
+export const ContactSubmission =
     models.ContactSubmission ||
     model('ContactSubmission', contactSubmissionSchema)
 
-export default ContactSubmission
+export type ContactSubmissionType = InferSchemaType<typeof contactSubmissionSchema>
 
