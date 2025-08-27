@@ -4,7 +4,7 @@ import type { NextRequest } from 'next/server'
 import { nanoid } from 'nanoid'
 import { UAParser } from 'ua-parser-js'
 
-export const trackingMiddleware = (
+export const trackingMiddleware = async (
     req: NextRequest,
     res: NextResponse
 ) => {

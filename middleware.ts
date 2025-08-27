@@ -3,11 +3,11 @@ import { trackingMiddleware } from '@/middleware/track'
 import type { NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
 
-const middleware = (request: NextRequest) => {
+const middleware = async (request: NextRequest) => {
     let response = NextResponse.next()
 
     response = localeMiddleware(request, response)
-    response = trackingMiddleware(request, response)
+    response = await trackingMiddleware(request, response)
 
     return response
 }
