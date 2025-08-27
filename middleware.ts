@@ -1,13 +1,13 @@
+import { localeMiddleware } from '@/middleware/locale'
+import { trackingMiddleware } from '@/middleware/track'
 import type { NextRequest } from 'next/server'
 import { NextResponse } from 'next/server'
 
 const middleware = (request: NextRequest) => {
-    const response = NextResponse.next()
-    const cookie = request.cookies.get('NEXT_LOCALE')?.value
+    let response = NextResponse.next()
 
-    if ( !cookie ) {
-        response.cookies.set('NEXT_LOCALE', 'en')
-    }
+    response = localeMiddleware(request, response)
+    response = trackingMiddleware(request, response)
 
     return response
 }
