@@ -1,6 +1,6 @@
 export type SessionData = {
     sessionId: string
-    ip?: string
+    ip: string
     browser?: string
     os?: string
     device: string
