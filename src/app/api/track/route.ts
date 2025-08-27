@@ -5,6 +5,9 @@ import { nanoid } from 'nanoid'
 import { UAParser } from 'ua-parser-js'
 
 export const GET = async (req: NextRequest) => {
+    if ( process.env.NODE_ENV === 'development' )
+        return NextResponse.json({ sessionId: 'dev' })
+
     const headers = req.headers
     const cookies = req.cookies
     let sessionId = cookies.get('session_id')?.value
