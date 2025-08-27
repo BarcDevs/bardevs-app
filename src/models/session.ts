@@ -22,6 +22,7 @@ const sessionSchema = new Schema(
         referrer: { type: String },
         ip: {
             type: String,
+            required: true,
             unique: true
         },
         location: { type: String }

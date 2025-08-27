@@ -5,7 +5,7 @@ export const createSessionEntry =
     async (data: SessionType) => {
         await connectToDatabase()
 
-        const exists = await isSessionExists(data.ip!)
+        const exists = await isSessionExists(data.ip)
         if ( exists )
             return
 
