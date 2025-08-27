@@ -1,8 +1,9 @@
+import { getGeo } from '@/lib/geoLocation/get-geo'
 import { NextRequest, NextResponse } from 'next/server'
 import { nanoid } from 'nanoid'
 import { UAParser } from 'ua-parser-js'
 
-import { createSessionEntry } from '@/services/session-service'
+import { createSessionEntry, isSessionExists } from '@/services/session-service'
 import { SessionData } from '@/types/session-data'
 
 export const GET = async (req: NextRequest) => {
@@ -25,6 +26,11 @@ export const GET = async (req: NextRequest) => {
         headers.get('x-real-ip') ||
         'unknown'
 
+    if ( await isSessionExists(ip) )
+        return NextResponse.json({ 'message': 'Session already exists' })
+
+    const location = await getGeo(ip)
+
     const session: SessionData = {
         ip,
         sessionId,
@@ -32,7 +38,8 @@ export const GET = async (req: NextRequest) => {
         os: deviceInfo.os.name,
         device: deviceInfo.device.type || 'desktop',
         language: headers.get('accept-language'),
-        referrer: source || req.url || 'unknown'
+        referrer: source || req.url || 'unknown',
+        location
     }
 
     await createSessionEntry(session)
