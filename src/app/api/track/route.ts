@@ -5,15 +5,14 @@ import { nanoid } from 'nanoid'
 import { UAParser } from 'ua-parser-js'
 
 export const GET = async (req: NextRequest) => {
-    if ( process.env.NODE_ENV !== 'production' )
-        return NextResponse.json({ sessionId: 'test' })
-
     const headers = req.headers
     const cookies = req.cookies
     let sessionId = cookies.get('session_id')?.value
 
     if ( sessionId )
         return NextResponse.json({ sessionId })
+
+    const source = headers.get('x-source')
 
     sessionId = nanoid()
 
@@ -32,7 +31,7 @@ export const GET = async (req: NextRequest) => {
         os: deviceInfo.os.name,
         device: deviceInfo.device.type || 'desktop',
         language: headers.get('accept-language'),
-        referrer: headers.get('referer')
+        referrer: source || req.url || 'unknown'
     }
 
     await createSessionEntry(session)
