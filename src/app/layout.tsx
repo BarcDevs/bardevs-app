@@ -1,5 +1,3 @@
-import { apiServer } from '@/lib/axios'
-import { AxiosError } from 'axios'
 import { FC } from 'react'
 import { Metadata } from 'next'
 import { NextIntlClientProvider } from 'next-intl'
@@ -40,15 +38,6 @@ const getDirection =
 const RootLayout: FC<LayoutProps> = async ({ children }) => {
     const locale = await getLocale()
     const messages = await getMessages()
-
-    try {
-        await apiServer.get('/track/')
-    } catch ( err: unknown ) {
-        if ( err instanceof AxiosError )
-            console.error('Failed to track session',
-                err.response?.data ||
-                err.message)
-    }
 
     return (
         <html lang={locale} dir={getDirection(locale)}>
