@@ -1,8 +1,9 @@
-import { createSessionEntry } from '@/services/session-service'
-import { SessionData } from '@/types/session-data'
 import { NextRequest, NextResponse } from 'next/server'
 import { nanoid } from 'nanoid'
 import { UAParser } from 'ua-parser-js'
+
+import { createSessionEntry } from '@/services/session-service'
+import { SessionData } from '@/types/session-data'
 
 export const GET = async (req: NextRequest) => {
     if ( process.env.NODE_ENV === 'development' )

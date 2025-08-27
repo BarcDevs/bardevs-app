@@ -5,10 +5,16 @@ export const createSessionEntry =
     async (data: SessionType) => {
         await connectToDatabase()
 
-        const exists = await Session.findOne({ sessionId: data.sessionId })
+        const exists = await isSessionExists(data)
         if ( exists )
             return
 
         return await Session
             .create({ ...data })
     }
+
+export const isSessionExists = async (data: SessionType) => {
+    return Session.findOne({
+        ip: data.ip
+    })
+}
