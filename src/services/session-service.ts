@@ -5,7 +5,7 @@ export const createSessionEntry =
     async (data: SessionType) => {
         await connectToDatabase()
 
-        const exists = await isSessionExists(data)
+        const exists = await isSessionExists(data.ip!)
         if ( exists )
             return
 
@@ -13,8 +13,8 @@ export const createSessionEntry =
             .create({ ...data })
     }
 
-export const isSessionExists = async (data: SessionType) => {
+export const isSessionExists = async (ip: string) => {
     return Session.findOne({
-        ip: data.ip
+        ip
     })
 }
